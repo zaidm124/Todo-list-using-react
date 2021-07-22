@@ -15,6 +15,9 @@ const middleware = (req, res, next) => {
   cosole.log("Hello my middle ware");
   next();
 };
+// Todo.deleteOne({ title: "a" }, function (err) {
+//   if (err) return handleError(err);
+// });
 
 app.use(require("./router/auth"));
 app.get("/", (req, res) => {
