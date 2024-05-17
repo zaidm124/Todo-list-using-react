@@ -22,7 +22,7 @@ class App extends Component {
 
   getPost = () => {
     axios
-      .get("http://localhost:3000/show")
+      .get("/show")
       .then((res) => {
         const data = res.data;
         this.setState({ posts: data });
@@ -36,7 +36,7 @@ class App extends Component {
   handleDeleteProperty = async (id) => {
     try {
       if (window.confirm("Are you sure?")) {
-        axios.get("http://localhost:3000/del/" + id).then((response) => {
+        axios.get("/del/" + id).then((response) => {
           console.log(response.data);
           window.location.reload();
         });

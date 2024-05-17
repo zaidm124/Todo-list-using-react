@@ -3,9 +3,6 @@ const router = express.Router();
 require("../DB/conn");
 const Todo = require("../model/userSchema");
 
-router.get("/", (req, res) => {
-  res.send("Hello from server auth.js");
-});
 
 router.post("/register", async (req, res) => {
   console.log(req.body.title);
